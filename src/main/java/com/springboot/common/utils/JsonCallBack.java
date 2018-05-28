@@ -1,4 +1,4 @@
-package com.springboot.utils;
+package com.springboot.common.utils;
 
 import java.io.Serializable;
 import java.util.HashMap;

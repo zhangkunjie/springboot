@@ -1,9 +1,9 @@
 package com.springboot.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.springboot.common.utils.JsonCallBack;
 import com.springboot.model.Student;
 import com.springboot.service.StudentService;
-import com.springboot.utils.JsonCallBack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
