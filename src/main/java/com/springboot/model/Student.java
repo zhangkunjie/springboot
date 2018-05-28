@@ -1,7 +1,10 @@
 package com.springboot.model;
 
+import com.springboot.constant.Constant;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by user on 2018/1/8.
@@ -11,6 +14,7 @@ public class Student implements Serializable {
     private String name;
     private Integer gender;
     private Integer age;
+    @DateTimeFormat(pattern = Constant.DATE_FORMAT1)
     private Date birthday;
     private String address;
     private Integer status;
