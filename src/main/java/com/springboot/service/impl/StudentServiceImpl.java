@@ -73,7 +73,7 @@ public class StudentServiceImpl implements StudentService {
     分页查找
     * */
     public PageInfo<Student> findPage(Student student, int pageSize, int pageNo) {
-        PageHelper.startPage(pageNo, pageSize);
+        PageHelper.startPage(pageNo,pageSize);
         List<Student> list = studentDao.findPage(student);
         PageInfo<Student> pageInfo = new PageInfo<Student>(list);
         return pageInfo;

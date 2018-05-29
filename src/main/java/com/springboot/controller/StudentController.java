@@ -125,15 +125,15 @@ public class StudentController {
         return jsonCallBack;
     }
 
-    @RequestMapping(value = "/findPage/{pageNo}/{pageSize}", method = RequestMethod.POST)
+    @RequestMapping(value = "/findPage/{pageSize}/{pageNo}", method = RequestMethod.POST)
     @ResponseBody
     public JsonCallBack findPage(@RequestBody Student student,
-                                 @PathVariable int pageNo, @PathVariable int pageSize) {
+                                 @PathVariable int pageSize, @PathVariable int pageNo) {
         logger.info("findAllStudents called");
         JsonCallBack jsonCallBack = new JsonCallBack(true);
         Map<String, Object> pairs = jsonCallBack.getPairs();
         try {
-            PageInfo<Student> pageInfo = studentService.findPage(student, pageNo, pageSize);
+            PageInfo<Student> pageInfo = studentService.findPage(student, pageSize, pageNo);
             pairs.put("dat", pageInfo);
         } catch (Exception e) {
             jsonCallBack.setSuccess(false);
